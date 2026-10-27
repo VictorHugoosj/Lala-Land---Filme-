@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lala Land — O Filme</title>
+<style>
+:root{--bg:#f6e9ff;--fg:#2b1650;--mut:#6a5390;--card:rgba(255,255,255,.72);--ac:#d6336c;--ac2:#e9a516;--bd:#d9c3f0;--hd:#2b1650;--hf:#fff3d6;--sky1:#ffd9a8;--sky2:#f3a6c8;--sky3:#8f6bd6;--star:0;
+--yel:#f4c20d;--blu:#2f6fd6;--grn:#2fa36b;--mag:#d6336c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#140a33;--fg:#fdf1ff;--mut:#c4b0e6;--card:rgba(40,22,86,.66);--ac:#ff5fa2;--ac2:#ffc93c;--bd:#4c3592;--hd:#0c0524;--hf:#ffe9a8;--sky1:#ff9e5e;--sky2:#c0398f;--sky3:#2a1670;--star:1;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#140a33;--fg:#fdf1ff;--mut:#c4b0e6;--card:rgba(40,22,86,.66);--ac:#ff5fa2;--ac2:#ffc93c;--bd:#4c3592;--hd:#0c0524;--hf:#ffe9a8;--sky1:#ff9e5e;--sky2:#c0398f;--sky3:#2a1670;--star:1;color-scheme:dark}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--fg);font:17px/1.7 "Josefin Sans","Gill Sans","Trebuchet MS",sans-serif;background:var(--bg) linear-gradient(180deg,var(--sky3) 0,var(--bg) 520px) no-repeat;min-height:100vh;position:relative}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:var(--star);
+background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 8%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 44% 22%,#ffe9a8 50%,transparent 51%),radial-gradient(1px 1px at 61% 12%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 78% 26%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 90% 9%,#ffe9a8 50%,transparent 51%),radial-gradient(1px 1px at 6% 46%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 95% 52%,#fff 50%,transparent 51%);
+animation:tw 4s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:calc(var(--star)*.45)}to{opacity:var(--star)}}
+@media (prefers-reduced-motion:reduce){body::after{animation:none}}
+header,main,footer{position:relative;z-index:1}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--hd);color:var(--hf);z-index:9;border-bottom:2px solid var(--ac2)}
+.bar{max-width:980px;margin:auto;padding:10px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
+.logo{font:400 1.5rem Limelight,"Playfair Display",Georgia,serif;letter-spacing:.06em;color:var(--ac2);margin-right:auto;text-shadow:0 0 12px rgba(255,201,60,.55)}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{color:var(--hf);text-decoration:none;padding:5px 14px;border-radius:99px;border:1px solid transparent;font:600 .82rem "Josefin Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+nav a:hover{border-color:var(--ac2)}
+nav a.on{background:var(--ac2);color:#2b1650}
+main{max-width:980px;margin:auto;padding:28px 18px 60px}
+.page{display:none}.page.on{display:block}
+h1{font:400 clamp(2.4rem,9vw,4.6rem)/1.05 Limelight,"Playfair Display",Georgia,serif;margin:.2em 0;color:var(--ac2);text-shadow:0 0 18px rgba(255,201,60,.45),0 2px 0 rgba(0,0,0,.25);letter-spacing:.02em}
+h2{font:italic 700 1.7rem "Playfair Display",Georgia,serif;margin:1.6em 0 .5em;color:var(--ac);display:flex;align-items:center;gap:12px}
+h2::before,h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--ac2))}
+h2::after{transform:scaleX(-1)}
+p{margin:.6em 0}.mut{color:var(--mut)}
+.hero{position:relative;overflow:hidden;padding:54px 22px 150px;border-radius:6px;color:#fff;text-align:center;border:3px solid var(--ac2);box-shadow:0 0 0 6px var(--hd),0 0 0 8px var(--ac2),0 20px 50px rgba(0,0,0,.35);background:linear-gradient(180deg,#1b0e52 0,#5a2a9a 38%,#c0398f 68%,#ff9e5e 92%,#ffd37a 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 10% 14%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 24% 30%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 40% 10%,#ffe9a8 50%,transparent 51%),radial-gradient(1px 1px at 58% 24%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 72% 12%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 88% 28%,#ffe9a8 50%,transparent 51%),radial-gradient(1px 1px at 94% 8%,#fff 50%,transparent 51%);animation:tw 3.5s ease-in-out infinite alternate;--star:1}
+.hero>*{position:relative}
+.hero .kick{margin:0;letter-spacing:.35em;text-transform:uppercase;font-size:.78rem;color:#ffe9a8}
+.hero h1{font-size:clamp(3rem,13vw,6.4rem);margin:.15em 0}
+.hero p{max-width:32em;margin:.6em auto;font-size:1.1rem}
+.hero svg{position:absolute;left:0;bottom:0;width:100%;height:130px;display:block}
+.orn{color:var(--ac2);letter-spacing:.6em;font-size:.9rem}
+.btn{display:inline-block;background:var(--ac2);color:#2b1650;border:0;padding:12px 26px;border-radius:99px;font:700 .85rem "Josefin Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;text-decoration:none;box-shadow:0 0 18px rgba(255,201,60,.5)}
+.btn:hover{filter:brightness(1.08)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-top:5px solid var(--yel);border-radius:10px;padding:16px 18px;backdrop-filter:blur(4px)}
+.grid .card:nth-child(4n+2){border-top-color:var(--blu)}.grid .card:nth-child(4n+3){border-top-color:var(--grn)}.grid .card:nth-child(4n+4){border-top-color:var(--mag)}
+.card h3{margin:.1em 0 .3em;font:700 1.15rem "Playfair Display",Georgia,serif}
+.big{font:400 2.4rem Limelight,Georgia,serif;color:var(--ac2)}
+.tl{list-style:none;padding:0;margin:16px 0;border-left:3px solid var(--ac2)}
+.tl li{padding:0 0 18px 20px;position:relative}
+.tl li::before{content:"✦";position:absolute;left:-12px;top:0;color:var(--ac2);background:var(--bg);line-height:1.2}
+.tl strong{font:400 1.05rem Limelight,Georgia,serif;letter-spacing:.12em;text-transform:uppercase}
+.tl li:nth-child(1) strong{color:#6aa5ff}.tl li:nth-child(2) strong{color:#4fd69a}.tl li:nth-child(3) strong{color:var(--yel)}.tl li:nth-child(4) strong{color:#ff9e5e}.tl li:nth-child(5) strong{color:#c8a2ff}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--bd);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:420px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--bd)}
+th{color:var(--ac2);font:700 .78rem "Josefin Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase}
+td:first-child{font:700 1rem "Playfair Display",Georgia,serif}
+form{display:grid;gap:10px;background:var(--card);border:1px solid var(--bd);border-top:5px solid var(--mag);border-radius:10px;padding:16px}
+input,select,textarea{font:inherit;padding:10px;border-radius:8px;border:1px solid var(--bd);background:rgba(0,0,0,.12);color:var(--fg);width:100%}
+input::placeholder,textarea::placeholder{color:var(--mut)}
+.stars{color:var(--ac2);letter-spacing:2px}
+.msg{border-bottom:1px dashed var(--bd);padding:14px 0}
+footer{text-align:center;color:var(--mut);font:.82rem "Josefin Sans",sans-serif;padding:24px 18px;letter-spacing:.08em}
+@media(max-width:560px){.bar{padding:10px 12px}.logo{width:100%}.hero{padding:40px 14px 130px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,700;1,700&family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><div class="bar"><div class="logo">LA LA LAND</div>
+<nav id="nav">
+<a href="#inicio">Início</a><a href="#historia">História</a><a href="#elenco">Elenco</a><a href="#musica">Música</a><a href="#mural">Mural</a>
+</nav></div></header>
+<main>
+
+<section class="page" id="p-inicio">
+<div class="hero"><p class="kick">Um filme de Damien Chazelle</p>
+<h1>La La Land</h1>
+<div class="orn">✦ ✦ ✦</div>
+<p>Em Los Angeles, uma aspirante a atriz e um pianista de jazz se encontram, se apaixonam e descobrem o preço de perseguir o que mais desejam. Cores vibrantes, números musicais e uma pergunta que fica: e se?</p>
+<a class="btn" href="#mural">Deixe sua avaliação</a>
+<svg viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path fill="#2a1260" d="M0 130V78c60-14 110-30 180-34 70 4 120 22 190 30 80-18 140-48 230-52 90 6 150 30 230 44 90-10 160-34 240-38 60 2 90 16 130 28v74z"/><path fill="#140a33" d="M0 130v-26c80-8 150-4 230 6 70-14 120-30 190-30 40 0 60 8 90 18 90-4 150 6 230 14 90-18 140-34 230-34 80 4 140 20 230 34v18z"/><g fill="#0c0524"><rect x="168" y="70" width="4" height="48"/><path d="M170 70c-20-6-34 2-42 12 16-6 30-4 42-4zM170 70c20-6 34 2 42 12-16-6-30-4-42-4zM170 70c-8-18-24-22-36-18 16 0 28 8 36 18zM170 70c8-18 24-22 36-18-16 0-28 8-36 18z"/><rect x="1010" y="74" width="4" height="44"/><path d="M1012 74c-20-6-34 2-42 12 16-6 30-4 42-4zM1012 74c20-6 34 2 42 12-16-6-30-4-42-4zM1012 74c-8-18-24-22-36-18 16 0 28 8 36 18zM1012 74c8-18 24-22 36-18-16 0-28 8-36 18z"/><path d="M560 108v-22h6v-8c0-10 12-16 22-16 10 0 22 6 22 16v8h6v22z"/><rect x="586" y="52" width="3" height="14"/></g></svg></div>
+<div class="grid">
+<div class="card"><div class="big">2016</div><h3>Ano de estreia</h3><p class="mut">Abriu o Festival de Veneza em agosto de 2016.</p></div>
+<div class="card"><div class="big">6</div><h3>Oscars</h3><p class="mut">Incluindo direção, atriz, fotografia, trilha, canção e design de produção.</p></div>
+<div class="card"><div class="big">5</div><h3>Estações</h3><p class="mut">O filme se divide em Inverno, Primavera, Verão, Outono e Inverno.</p></div>
+</div>
+<h2>Destaques do mural</h2>
+<div id="home-stats" class="card mut">Carregando avaliações dos fãs…</div>
+</section>
+
+<section class="page" id="p-historia">
+<h1>A história</h1>
+<p class="mut">Sem grandes spoilers: o essencial para entrar no clima.</p>
+<ul class="tl">
+<li><strong>Inverno.</strong> Mia trabalha numa cafeteria de estúdio e vai a testes sem sucesso. Sebastian sonha em abrir um clube dedicado ao jazz puro.</li>
+<li><strong>Primavera.</strong> Os caminhos se cruzam várias vezes até que a conexão acontece, entre festas, dança e colinas de Los Angeles.</li>
+<li><strong>Verão.</strong> O romance floresce, mas cada um precisa decidir como chegar onde quer.</li>
+<li><strong>Outono.</strong> As ambições começam a pesar sobre a relação.</li>
+<li><strong>Inverno.</strong> Um epílogo musical mostra o que poderia ter sido.</li>
+</ul>
+<h2>Temas</h2>
+<div class="grid">
+<div class="card"><h3>Ambição</h3><p class="mut">O custo de correr atrás de um sonho artístico.</p></div>
+<div class="card"><h3>Nostalgia</h3><p class="mut">Homenagem aos musicais clássicos de Hollywood e ao jazz.</p></div>
+<div class="card"><h3>Escolhas</h3><p class="mut">Amar também é abrir mão, e nem sempre há vilões.</p></div>
+</div>
+</section>
+
+<section class="page" id="p-elenco">
+<h1>Elenco e equipe</h1>
+<div class="tbl"><table>
+<tr><th>Nome</th><th>Função</th></tr>
+<tr><td>Emma Stone</td><td>Mia Dolan, atriz</td></tr>
+<tr><td>Ryan Gosling</td><td>Sebastian Wilder, pianista</td></tr>
+<tr><td>John Legend</td><td>Keith</td></tr>
+<tr><td>Rosemarie DeWitt</td><td>Laura</td></tr>
+<tr><td>J.K. Simmons</td><td>Bill</td></tr>
+<tr><td>Damien Chazelle</td><td>Direção e roteiro</td></tr>
+<tr><td>Justin Hurwitz</td><td>Trilha original</td></tr>
+<tr><td>Linus Sandgren</td><td>Direção de fotografia</td></tr>
+</table></div>
+<h2>Curiosidade</h2>
+<p>Na cerimônia do Oscar de 2017, o prêmio de Melhor Filme foi anunciado por engano para La La Land e corrigido ao vivo para Moonlight, um dos momentos mais comentados da história da premiação.</p>
+</section>
+
+<section class="page" id="p-musica">
+<h1>Música</h1>
+<p class="mut">Composta por Justin Hurwitz. Por direitos autorais, aqui ficam só os títulos e o papel de cada faixa na história.</p>
+<div class="grid">
+<div class="card"><h3>Another Day of Sun</h3><p class="mut">Abertura em um congestionamento que vira dança.</p></div>
+<div class="card"><h3>Someone in the Crowd</h3><p class="mut">Preparação para a festa, cheia de expectativa.</p></div>
+<div class="card"><h3>A Lovely Night</h3><p class="mut">Sapateado ao entardecer sobre a cidade.</p></div>
+<div class="card"><h3>City of Stars</h3><p class="mut">Tema do casal e vencedora do Oscar de Melhor Canção.</p></div>
+<div class="card"><h3>Audition (The Fools Who Dream)</h3><p class="mut">O momento mais pessoal de Mia.</p></div>
+<div class="card"><h3>Epilogue</h3><p class="mut">A sequência final que amarra tudo.</p></div>
+</div>
+</section>
+
+<section class="page" id="p-mural">
+<h1>Mural dos fãs</h1>
+<p class="mut">Dê sua nota e deixe um comentário. Tudo fica salvo no banco de dados do site.</p>
+<form id="f">
+<input id="nome" placeholder="Seu nome" maxlength="40" required>
+<select id="nota"><option value="5">★★★★★ — Amei</option><option value="4">★★★★ — Muito bom</option><option value="3">★★★ — Bom</option><option value="2">★★ — Regular</option><option value="1">★ — Não curti</option></select>
+<select id="fav"><option>City of Stars</option><option>A Lovely Night</option><option>Another Day of Sun</option><option>Audition (The Fools Who Dream)</option><option>Someone in the Crowd</option><option>Epilogue</option></select>
+<textarea id="txt" rows="3" maxlength="400" placeholder="O que você achou?" required></textarea>
+<button class="btn" type="submit" id="send">Publicar</button>
+<div id="st" class="mut"></div>
+</form>
+<div id="stats" class="card" style="margin-top:14px"></div>
+<div id="list"></div>
+</section>
+
+</main>
+<footer>Site de fãs, não oficial. La La Land é uma obra de seus respectivos detentores de direitos.</footer>
+<script>
+var ROUTES=["inicio","historia","elenco","musica","mural"];
+function route(){var h=(location.hash||"#inicio").slice(1);if(ROUTES.indexOf(h)<0)h="inicio";
+ROUTES.forEach(function(r){document.getElementById("p-"+r).classList.toggle("on",r===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);route();
+
+var posts=[];
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function stars(n){return "★".repeat(n)+"☆".repeat(5-n)}
+function render(){
+ var n=posts.length,s=document.getElementById("stats"),hs=document.getElementById("home-stats"),l=document.getElementById("list");
+ if(!n){var e="Ainda não há avaliações. Seja o primeiro a comentar!";s.textContent=e;hs.textContent=e;l.innerHTML="";return}
+ var avg=posts.reduce(function(a,p){return a+(+p.nota||0)},0)/n;
+ var c={};posts.forEach(function(p){c[p.fav]=(c[p.fav]||0)+1});
+ var top=Object.keys(c).sort(function(a,b){return c[b]-c[a]})[0];
+ var t="<strong>"+avg.toFixed(1)+"</strong> de 5 (<span class='stars'>"+stars(Math.round(avg))+"</span>) em "+n+" avaliação(ões). Música favorita: <strong>"+esc(top)+"</strong>.";
+ s.innerHTML=t;hs.innerHTML=t;
+ l.innerHTML=posts.map(function(p){return "<div class='msg'><strong>"+esc(p.nome||"Anônimo")+"</strong> <span class='stars'>"+stars(+p.nota||0)+"</span><div class='mut'>Favorita: "+esc(p.fav||"")+"</div><p>"+esc(p.txt||"")+"</p></div>"}).join("")}
+
+var db=null;
+(async function(){
+ try{db=await claude.use("db")}catch(e){db=null}
+ var st=document.getElementById("st");
+ if(!db){document.getElementById("stats").textContent="O mural precisa do banco de dados e fica disponível ao abrir o site logado.";
+  document.getElementById("home-stats").textContent="Mural indisponível neste momento.";document.getElementById("send").disabled=true;return}
+ db.collection("mural").orderBy("ts","desc").limit(50).onSnapshot(function(snap){
+  posts=snap.docs.map(function(d){return d.data()});render()},function(){
+  document.getElementById("stats").textContent="Não foi possível ler o mural agora."});
+ document.getElementById("f").addEventListener("submit",async function(ev){
+  ev.preventDefault();var b=document.getElementById("send");b.disabled=true;st.textContent="Enviando…";
+  try{await db.collection("mural").add({nome:document.getElementById("nome").value.trim(),nota:+document.getElementById("nota").value,fav:document.getElementById("fav").value,txt:document.getElementById("txt").value.trim(),ts:Date.now()});
+   document.getElementById("txt").value="";st.textContent="Publicado, obrigado!"}
+  catch(e){st.textContent="Não foi possível publicar. Seu nível de acesso pode ser somente leitura."}
+  b.disabled=false});
+})();
+</script>
+</body>
+</html>
